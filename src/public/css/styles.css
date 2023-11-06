@@ -1,0 +1,28 @@
+.navbar-brand img {
+  width: 15% !important;
+
+}
+
+body {
+  background-image: url(https://i.stack.imgur.com/gNqtV.jpg);
+  justify-content: center;
+
+}
+
+.card-header {
+  font:italic;
+}
+
+#botón {
+  background-color: #8D769A;
+  border-color: #8D769A;
+}
+
+.card{
+  background-color: #F0E7E5;
+}
+
+.card-body {
+  border-radius: 30%;
+  border-color: purple;
+}

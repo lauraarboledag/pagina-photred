@@ -1,0 +1,64 @@
+<div class="card">
+    <div class="card-header bg-dark">
+        <h3 class="card-title text-white">
+            <i class="far fa image">Sube y comenta imágenes</i>
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <p>Suba la imagen que quiera compartir:</p>
+                <input type="file" name="image"
+                    class="form-control text-dark border-success" required />
+            </div>
+
+            <div class="mb-3">
+                <p>Inserte el título de la imagen</p>
+                <input type="text" name="titulo"
+                    class="form-control text-black border border-success"
+                    placeholder="Título de la imagen"
+                    required />
+            </div>
+
+            <div class="mb-3">
+                <p>Inserte la descripción de su imagen</p>
+                <textarea
+                    name="descripcion"
+                    rows="2"
+                    class="form-control text-black border border-success"
+                    placeholder="Descripción de la imagen"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="botón"="btn btn-success">
+                    <i class="fa fa-upload"></i>
+                    Subir la imagen
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header bg-dark text-white">
+        <h3><i class="far fa-images">Imágenes subidas recientemente</i></h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            {{#each images}}
+            <div class="col-md-4">
+                <a href="">
+                    <img src="/public/upload/{{this}}" alt=""
+                    class="w-100 h-100 img-thumbnail">
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+
+

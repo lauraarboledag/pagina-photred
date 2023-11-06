@@ -1,0 +1,27 @@
+{
+  "name": "photred-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "errorhandler": "^1.5.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "fs-extra": "^11.1.1",
+    "handlebars": "^4.7.8",
+    "md5": "^2.3.0",
+    "mongoose": "^7.6.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
