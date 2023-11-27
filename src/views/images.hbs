@@ -1,0 +1,85 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between 
+    align-items-center">
+    <h2>{{titulo}}</h2>
+    <button class="btn btn-danger" id="btn-delete" data-id="{{image_id}}">
+      <i class="fa fa-times">Borrar imagen</i>
+    </button>
+  </div>
+  <div class="card-body">
+    <p>{{descripcion}}</p>
+    <div class="text-center">
+      <img src="/public/upload/{{filename}}" alt="imagen subida"
+        class="img-fluid">
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="card footer d-flex justify-content-between 
+    align-items-center">
+      <button class="btn btn-success" id="btn-like" data-id="{{image.filename}}">
+        <i></i>Like
+      </button>
+      <p>
+        <span class="likes-count">{{likes}}</span>
+      </p>
+      <p>
+        <span class="views-count">{{views}}</span>
+      </p>
+      <p>
+        {{timeAgo image.timestamp}}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-2">
+  <div class="card-header d-flex justify-content-between 
+    align-items-center">
+    <h3>Comentarios</h3>
+    <button class="btn btn-info" id="btn-toggle-comment">
+      <i></i>¡Comparte tu comentario!
+    </button>
+  </div>
+  <div class="card-body">
+    <blockquote id = "post-comment">
+      <form action="/images/{{image_id}}/comment" method="POST">
+      <input type="hidden" name="image_id" value="{{image_id}}">
+        <div class="form-group">
+          <input type="text" class="form-control" name="name"
+            placeholder="Nombre de usuario">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email"
+            placeholder="Correo electrónico">
+        </div>
+        <div class="form-group">
+          <textarea name="comment" rows="2" class="form-control"
+            placeholder="Añade tu comentario :)">
+          </textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <button class="btn btn-success" id="btn-comment" type="submit">
+            <i>¡Publicar!</i>
+          </button>
+        </div>
+      </form>
+    </blockquote>
+    <ul class="list-group p-4">
+      {{#each comments}}
+      <li class="row">
+        <a href="#" class="col-text-center">
+          <img src="http://gravatar.com/avatar/{{gravatar}}?id=monsterid&s=45"
+            alt="perfil">
+        </a>
+        <blockquote class="col">
+          <p class="lead">{{comment}}</p>
+          <footer>
+            {{name}} - {{timeAgo timestamp}}
+          </footer>
+        </blockquote>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

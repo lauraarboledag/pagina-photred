@@ -48,17 +48,13 @@
     <div class="card-body">
         <div class="row">
             {{#each images}}
-            <div class="col-md-4">
-                <a href="">
-                    <img src="/public/upload/{{this}}" alt=""
-                    class="w-100 h-100 img-thumbnail">
-                </a>
-            </div>
+                <div class="col-md-4">
+                    <a href="/images/{{_id}}">
+                        <img src="/public/upload/{{filename}}" alt="{{titulo}}"
+                        class="w-100 h-100 img-thumbnail">
+                    </a>
+                </div>
             {{/each}}
         </div>
     </div>
 </div>
-
-
-
-

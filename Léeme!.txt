@@ -1,0 +1,52 @@
+Buenas tardes, profe, aquí le enlisto lo que necesita para correr 
+nuestro código ;)
+----------
+Nota: Se debe tomar en cuenta que este trabajo se usa desde Node, 
+por lo que se recomienda tener Node previamente instalado. 
+----------
+Paso uno: Mediante npm instalar: 
+- express (Framework de Node)
+- handlebars (Motor de plantillas tipo HTML)
+- express-handlebars (Integra express en handlebars)
+- bootstrap (Biblioteca)
+- mongoose (Módulo de conexión a Mongo DB, driver
+SE DEBE TENER MONGO DB INSTALADO)
+- morgan (Módulo del servidor, permite visualizar los registros
+del usuario desde la consola)
+- multer (Módulo que permite subir las imágenes desde un 
+formulario HTML al servidor)
+- fs-extra (Módulo que permite la utilización de promesas 
+"async-await" con file-system)
+- errorhandler (Permite la visualización de errores por pantalla)
+- md5 (Permite cifrar información, en este caso, cifra los iconos
+aleatorios que se muestran en los comentarios)
+- nodemon -D (Módulo reinicia el servidor cada vez que
+se hacen cambios en el mismo)
+----------
+Paso dos: Ejecutar nodemon
+a. En la sección package.json donde se reflejan las instalaciones,
+ir donde dice "scripts" (Dentro del código de gitHub, línea 6) y
+hacer lo siguiente:
+
+	"scripts":{
+	  "dev": "nodemon src/index.js"
+	},
+
+Nota: Si no está ejecutado en el package.json, hacer este paso, si
+sí lo está, entonces sólo instalarlo.
+-----------
+Paso tres: Iniciar el proyecto
+a. Poner en el buscador: http://localhost:5500/
+
+b. Colocar en la consola de visual lo siguiente: 
+			
+			npm run dev   
+
+c. Recargar la página. Si todo salió bien, se deberá
+mostrar la interfaz.
+
+
+
+¡Gracias por leer! :)
+
+

@@ -26,3 +26,11 @@ body {
   border-radius: 30%;
   border-color: purple;
 }
+
+h2 {
+  font-style: italic;
+}
+
+.button {
+  background-color: #8D769A;
+}
